@@ -1,0 +1,195 @@
+{
+  "language": "Hindi",
+  "algorithm": "Unigram",
+  "library": "SentencePiece",
+  "trained_from_scratch": true,
+  "pretrained_tokenizer_used": false,
+  "pretrained_vocabulary_used": false,
+  "pretrained_model_used": false,
+  "vocabulary_size": 15000,
+  "special_tokens": {
+    "unk": "<unk>",
+    "bos": "<s>",
+    "eos": "</s>",
+    "pad": "<pad>"
+  },
+  "special_token_ids": {
+    "unk": 0,
+    "bos": 1,
+    "eos": 2,
+    "pad": 3
+  },
+  "sample_statistics": {
+    "sentences": 5,
+    "characters": 226,
+    "tokens": 51,
+    "unknown_tokens": 0,
+    "unknown_token_rate": 0.0,
+    "characters_per_token": 4.4314,
+    "roundtrip_fidelity_passed": true
+  },
+  "examples": [
+    {
+      "text": "भारत एक विविधताओं वाला देश है।",
+      "tokens": [
+        "▁भारत",
+        "▁एक",
+        "▁विविधता",
+        "ओं",
+        "▁वाला",
+        "▁देश",
+        "▁है",
+        "।"
+      ],
+      "token_ids": [
+        161,
+        22,
+        10767,
+        492,
+        1651,
+        250,
+        15,
+        4
+      ],
+      "token_count": 8,
+      "unknown_tokens": 0,
+      "roundtrip_passed": true
+    },
+    {
+      "text": "हिंदी भारत की प्रमुख भाषाओं में से एक है।",
+      "tokens": [
+        "▁हिंदी",
+        "▁भारत▁की",
+        "▁प्रमुख",
+        "▁भाषाओं",
+        "▁में▁से▁एक▁है",
+        "।"
+      ],
+      "token_ids": [
+        827,
+        1850,
+        522,
+        7936,
+        7550,
+        4
+      ],
+      "token_count": 6,
+      "unknown_tokens": 0,
+      "roundtrip_passed": true
+    },
+    {
+      "text": "कृत्रिम बुद्धिमत्ता और मशीन लर्निंग आज महत्वपूर्ण तकनीकें हैं।",
+      "tokens": [
+        "▁कृत्रिम",
+        "▁बुद्धि",
+        "म",
+        "त्ता",
+        "▁और",
+        "▁मशीन",
+        "▁ल",
+        "र्न",
+        "िंग",
+        "▁आज",
+        "▁महत्वपूर्ण",
+        "▁तकनीक",
+        "ें",
+        "▁हैं",
+        "।"
+      ],
+      "token_ids": [
+        12589,
+        5099,
+        37,
+        3505,
+        8,
+        1507,
+        276,
+        2337,
+        95,
+        109,
+        991,
+        2544,
+        81,
+        31,
+        4
+      ],
+      "token_count": 15,
+      "unknown_tokens": 0,
+      "roundtrip_passed": true
+    },
+    {
+      "text": "प्राकृतिक भाषा प्रसंस्करण में टोकनाइज़र एक आधारभूत घटक है।",
+      "tokens": [
+        "▁प्राकृतिक",
+        "▁भाषा",
+        "▁प्रसंस्करण",
+        "▁में",
+        "▁टो",
+        "क",
+        "न",
+        "ाइज़",
+        "र",
+        "▁एक",
+        "▁आधार",
+        "भूत",
+        "▁घटक",
+        "▁है",
+        "।"
+      ],
+      "token_ids": [
+        3492,
+        1495,
+        13445,
+        6,
+        2457,
+        35,
+        23,
+        11216,
+        25,
+        22,
+        1747,
+        6036,
+        9881,
+        15,
+        4
+      ],
+      "token_count": 15,
+      "unknown_tokens": 0,
+      "roundtrip_passed": true
+    },
+    {
+      "text": "यह एक शुद्ध हिंदी परीक्षण वाक्य है।",
+      "tokens": [
+        "▁यह▁एक",
+        "▁शुद्ध",
+        "▁हिंदी",
+        "▁परीक्षण",
+        "▁वाक्य",
+        "▁है",
+        "।"
+      ],
+      "token_ids": [
+        2845,
+        3669,
+        827,
+        2128,
+        9819,
+        15,
+        4
+      ],
+      "token_count": 7,
+      "unknown_tokens": 0,
+      "roundtrip_passed": true
+    }
+  ],
+  "requested_vocabulary_size": 15000,
+  "training_documents": 7831689,
+  "training_dataset": "/home/shahid/LMA_A1/individual-project-Shahid0208/hindi/data/splits/train.parquet",
+  "training_data_scope": "Hindi train.parquet only",
+  "tokenizer_training_policy": "Tokenizer trained from scratch using SentencePiece Unigram.",
+  "pretrained_resources": {
+    "tokenizer": false,
+    "vocabulary": false,
+    "model": false
+  }
+}

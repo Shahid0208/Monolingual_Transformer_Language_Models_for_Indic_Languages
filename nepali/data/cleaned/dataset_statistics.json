@@ -1,0 +1,73 @@
+{
+  "language": "Nepali",
+  "timestamp": "2026-08-21 19:41:08",
+  "format": "Apache Parquet (Snappy)",
+  "schema_columns": [
+    "document_id",
+    "text",
+    "language",
+    "source_type",
+    "source"
+  ],
+  "token_multiplier": 1.35,
+  "manual_token_share_percent": 23.16,
+  "downloaded_token_share_percent": 76.84,
+  "meets_manual_20pct_requirement": true,
+  "total_tokens_target_500m_met": true,
+  "manual": {
+    "file_name": "nepali_manual_clean.parquet",
+    "raw_rows": 2949145,
+    "cleaned_rows": 2746254,
+    "cleaned_words": 88399397,
+    "estimated_tokens": 119339185,
+    "exact_duplicates_removed": 53473,
+    "near_duplicates_removed": 11577,
+    "file_size_mb": 555.36
+  },
+  "downloaded": {
+    "file_name": "nepali_downloaded_clean.parquet",
+    "raw_rows": 8978234,
+    "cleaned_rows": 8307330,
+    "cleaned_words": 293259552,
+    "estimated_tokens": 395900395,
+    "exact_duplicates_removed": 427220,
+    "near_duplicates_removed": 110675,
+    "file_size_mb": 2030.47
+  },
+  "total_clean_corpus": {
+    "rows": 11053584,
+    "words": 381658949,
+    "estimated_tokens": 515239581,
+    "exact_duplicates_removed": 480693,
+    "near_duplicates_removed": 122252,
+    "total_duplicates_removed": 602945,
+    "file_size_mb": 2585.83,
+    "processing_time_seconds": 367.72
+  },
+  "splits": {
+    "train": {
+      "file_name": "train.parquet",
+      "rows": 10167950,
+      "words": 351106424,
+      "estimated_tokens": 469134008,
+      "size_mb": 2381.59,
+      "percentage": 91.99
+    },
+    "val": {
+      "file_name": "val.parquet",
+      "rows": 443871,
+      "words": 15258557,
+      "estimated_tokens": 20386984,
+      "size_mb": 106.32,
+      "percentage": 4.0
+    },
+    "test": {
+      "file_name": "test.parquet",
+      "rows": 441763,
+      "words": 15293968,
+      "estimated_tokens": 20435624,
+      "size_mb": 106.56,
+      "percentage": 4.01
+    }
+  }
+}
