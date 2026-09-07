@@ -1,0 +1,38 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Large Datasets & Parquet files (Per PDF Guidelines: upload to Google Drive, do not commit to Git)
+*.parquet
+*.parquet.tmp
+*.jsonl
+*.txt.gz
+*.tar.gz
+hindi/data/raw/
+hindi/data/cleaned/hindi_*.parquet
+hindi/data/splits/*.parquet
+nepali/data/raw/
+nepali/data/cleaned/nepali_*.parquet
+nepali/data/splits/*.parquet
+
+# Model weight checkpoints (Phase 2 & 3: large PyTorch checkpoints go to Google Drive)
+*.pt
+*.pth
+*.bin
+*.ckpt
+hindi/checkpoints/*.pt
+nepali/checkpoints/*.pt
+
+# Temporary & OS files
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*~

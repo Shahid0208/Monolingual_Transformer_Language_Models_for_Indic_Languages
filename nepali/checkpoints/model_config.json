@@ -1,0 +1,21 @@
+{
+  "vocab_size": 10000,
+  "max_seq_len": 512,
+  "pad_token_id": 3,
+  "bos_token_id": 1,
+  "eos_token_id": 2,
+  "unk_token_id": 0,
+  "d_model": 384,
+  "n_layers": 12,
+  "n_heads": 6,
+  "d_ff": 1536,
+  "dropout": 0.1,
+  "attention_dropout": 0.1,
+  "layer_norm_eps": 1e-05,
+  "bias": true,
+  "pos_embedding_type": "learned",
+  "tie_word_embeddings": true,
+  "activation": "gelu",
+  "language": "Nepali",
+  "model_name": "Model_L_Nepali_25M"
+}
