@@ -1,0 +1,21 @@
+{
+  "language": "hi",
+  "total_samples": 7000,
+  "train_samples": 5600,
+  "val_samples": 700,
+  "test_samples": 700,
+  "tasks_distribution": {
+    "direct_comparison": 2332,
+    "transitive_chaining": 2332,
+    "extremes_ordering": 2336
+  },
+  "total_subword_tokens": 413543,
+  "unk_count": 0,
+  "unk_rate_percent": 0.0,
+  "zero_leakage_guaranteed": true,
+  "three_way_disjoint_entities": true,
+  "train_entity_pool_size": 36,
+  "val_entity_pool_size": 16,
+  "test_entity_pool_size": 16,
+  "duplicate_prompts_across_splits": 0
+}
