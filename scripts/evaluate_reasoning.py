@@ -54,10 +54,11 @@ def extract_answer(generated_text: str) -> str:
     if "उत्तर:" in generated_text:
         parts = generated_text.split("उत्तर:")
         ans = parts[-1].strip().split("\n")[0].strip()
+        ans = ans.strip(" ।?.,!:;-\"'\u2047\ufffd⁇")
         return ans
     # Fallback to last line
     lines = [l.strip() for l in generated_text.strip().split("\n") if l.strip()]
-    return lines[-1] if lines else ""
+    return lines[-1].strip(" ।?.,!:;-\"'\u2047\ufffd⁇") if lines else ""
 
 
 def evaluate_reasoning_dataset(
@@ -107,8 +108,13 @@ def evaluate_reasoning_dataset(
         gen_text = sp.decode(gen_tokens)
         pred_entity = extract_answer(gen_text)
 
-        # Check match
-        is_correct = (gold_entity in pred_entity) or (pred_entity in gold_entity)
+        # Robust Exact Match Check
+        pred_clean = pred_entity.strip()
+        gold_clean = gold_entity.strip()
+        if not pred_clean:
+            is_correct = False
+        else:
+            is_correct = (pred_clean == gold_clean) or (gold_clean in pred_clean) or (len(pred_clean) >= 3 and pred_clean in gold_clean)
         if is_correct:
             correct += 1
             if task_type in task_stats:
