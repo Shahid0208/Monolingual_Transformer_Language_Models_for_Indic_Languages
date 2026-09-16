@@ -23,9 +23,9 @@ To investigate the fundamental necessity of positional information in autoregres
 All other architectural hyperparameters ($d_{\text{model}} = 384$, $N = 12$, $h = 6$, $d_{\text{ff}} = 1536$, $V = 10,000$), optimizer configurations (AdamW, $\beta_1=0.9, \beta_2=0.98$), learning rate schedules (cosine decay with warmup), context lengths ($T_{\text{max}} = 512$), and tokenizer models were held strictly identical.
 
 ### Checkpoints & Pretrained Artifacts
-* **Ablated Model Checkpoint (`ablation_no_pos_final.pt`):** [Google Drive — Ablated Hindi Model Checkpoint](https://drive.google.com/file/d/YOUR_ABLATION_CHECKPOINT_ID/view?usp=sharing)
+* **Ablated Model Checkpoint (`ablation_no_pos_final.pt`):** [Google Drive — Ablated Hindi Model H](https://drive.google.com/file/d/19mjFnqzE9yLC6ML7U7srrU99zEbaB5Ug/view?usp=drive_link)
 * **Standard Model H Baseline Checkpoint:** [Google Drive — Standard Hindi Model H](https://drive.google.com/file/d/1zqv-qrALlxFdNHmKJejUZZH0ZVjodgbr/view?usp=sharing)
-* **Pre-computed Evaluation Results:** [bonus-ablation-no-pos/hindi_ablation_no_pos/ablation_results.json](file:///home/shahid/LMA_A1/individual-project-Shahid0208/bonus-ablation-no-pos/hindi_ablation_no_pos/ablation_results.json)
+* **Pre-computed Evaluation Results:** [bonus-ablation-no-pos/hindi_ablation_no_pos/ablation_results.json](bonus-ablation-no-pos/hindi_ablation_no_pos/ablation_results.json)
 
 ---
 
