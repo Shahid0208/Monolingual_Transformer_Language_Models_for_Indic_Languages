@@ -48,11 +48,33 @@ We evaluated the ablated model across the full Phase 2 evaluation suite on the h
 
 ## 3. Publication Figures & Diagnostic Plots
 
+### A. Intrinsic Performance Degradation & Lexical Diversity Failure
 ![Figure 10: Standard vs Ablated Model Comparison](figures/fig10_ablation_comparison.png)
 
-### Key Observations from Figure 10:
 * **Figure 10A (Performance Collapse):** Test perplexity surges by $158.5\%$ ($71.37 \to 184.50$), and bits-per-byte more than doubles ($0.688 \to 1.450$), indicating that the ablated model fails to compress sequential dependencies.
 * **Figure 10B (Degenerate Repetition & Starvation):** The ablated model suffers a catastrophic failure mode in autoregressive generation: trigram repetition escalates to **$82.5\%$**, while Distinct-1 and Distinct-2 collapse below $0.15$, proving that the model is trapped in fixed-point repetition loops.
+
+---
+
+### B. Attention Dynamics: Entropy & Attention Span Comparison
+![Figure 10B: Layer-wise Attention Entropy and Distance Comparison](figures/fig10b_attention_ablation_comparison.png)
+
+* **Layer-wise Shannon Entropy:** Standard Model H develops deep layer-wise specialization with structured entropy peaks and valleys (1.21 to 1.95 nats). In contrast, the ablated model exhibits erratic, unorganized entropy curves with diminished middle-layer capacity.
+* **Mean Attention Distance:** Standard Model H expands its attention span up to **10.1 tokens** in middle and deep layers to capture long-range syntactic agreement. The ablated model collapses to local bag-of-words matching ($1.53$ to $3.37$ tokens), failing to maintain long-range context.
+
+---
+
+### C. Multi-Head Attention Heatmaps
+
+#### 1. Ablated Model H Attention Heatmaps (No Positional Embeddings)
+![Figure 10C: Ablated Model Attention Heatmaps](figures/fig10c_ablation_attention_heatmaps.png)
+
+* **Diagnostic Finding:** Notice the complete absence of diagonal locality bands. In Layer 1 and Layer 6, attention heads distribute uniformly across identical high-frequency unigram tokens rather than tracking relative syntactic distance.
+
+#### 2. Standard Baseline Model H Attention Heatmaps (Learned Pos PE)
+![Figure 8: Standard Hindi Attention Heatmaps](figures/fig8_hindi_attention_heatmaps.png)
+
+* **Diagnostic Finding:** Clear diagonal tracking bands in Layer 1 and Layer 6 bind contiguous Devanagari subwords and grammatical case markers, enabling structured phrase-level comprehension.
 
 ---
 
@@ -110,6 +132,9 @@ python scripts/run_ablation_no_pos.py \
     --max_steps 1000 \
     --batch_size 16
 
-# 2. Or run interactively via Kaggle GPU Notebook:
+# 2. Generate Publication Comparison Figures
+python scripts/generate_ablation_figures.py
+
+# 3. Or run interactively via Kaggle GPU Notebook:
 # notebooks/kaggle-ablation-no-pos.ipynb
 ```

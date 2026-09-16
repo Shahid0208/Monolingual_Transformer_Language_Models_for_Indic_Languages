@@ -40,9 +40,25 @@ We ran the **full Phase 2 evaluation suite** on the ablated model and compared i
 
 ---
 
-## 2. Comparative Publication Figures
+## 2. Comparative Publication Figures & Attention Diagnostics
 
+### A. Performance Degradation & Diversity Collapse
 ![Figure 10: Standard vs. Ablated Model Performance](report/figures/fig10_ablation_comparison.png)
+
+---
+
+### B. Layer-wise Attention Entropy & Attention Span Comparison
+![Figure 10B: Attention Entropy and Distance Comparison](report/figures/fig10b_attention_ablation_comparison.png)
+
+---
+
+### C. Multi-Head Attention Heatmaps (Ablated vs. Standard Model)
+
+#### 1. Ablated Model H Attention Heatmaps (No Positional Embeddings)
+![Figure 10C: Ablated Model Attention Heatmaps](report/figures/fig10c_ablation_attention_heatmaps.png)
+
+#### 2. Standard Baseline Model H Attention Heatmaps (Learned Pos PE)
+![Figure 8: Standard Hindi Attention Heatmaps](report/figures/fig8_hindi_attention_heatmaps.png)
 
 ---
 
@@ -61,6 +77,7 @@ We ran the **full Phase 2 evaluation suite** on the ablated model and compared i
 
 ### A. Run via CLI Script
 ```bash
+# 1. Run Pretraining & Full Phase 2 Evaluation Suite
 python scripts/run_ablation_no_pos.py \
     --train_parquet hindi/data/splits/train.parquet \
     --val_parquet hindi/data/splits/val.parquet \
@@ -70,6 +87,9 @@ python scripts/run_ablation_no_pos.py \
     --batch_size 16 \
     --max_steps 1000 \
     --use_amp
+
+# 2. Generate Comparison Diagnostic Figures
+python scripts/generate_ablation_figures.py
 ```
 
 ### B. Run via Interactive Kaggle / Colab Notebook
