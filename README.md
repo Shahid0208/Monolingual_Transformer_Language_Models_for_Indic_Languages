@@ -20,6 +20,11 @@ We ran the **full Phase 2 evaluation suite** on the ablated model and compared i
 3. **Lexical Diversity & Repetition:** Distinct-1, Distinct-2, and trigram repetition rates.
 4. **Attention Diagnostics:** Layer-wise Shannon attention entropy, mean attention distance, and attention heatmaps.
 
+### Model Checkpoints & Pretrained Artifacts
+* **Ablated Model Checkpoint (`ablation_no_pos_final.pt`):** [Google Drive — Ablated Hindi Model Checkpoint](https://drive.google.com/file/d/YOUR_ABLATION_CHECKPOINT_ID/view?usp=sharing)
+* **Standard Model H Baseline Checkpoint:** [Google Drive — Standard Hindi Model H](https://drive.google.com/file/d/1zqv-qrALlxFdNHmKJejUZZH0ZVjodgbr/view?usp=sharing)
+* **Pre-computed Evaluation Results:** [bonus-ablation-no-pos/hindi_ablation_no_pos/ablation_results.json](bonus-ablation-no-pos/hindi_ablation_no_pos/ablation_results.json)
+
 ---
 
 ## 1. Key Comparative Results
