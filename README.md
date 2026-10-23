@@ -77,8 +77,8 @@ Monolingual_Transformer_Language_Models_for_Indic_Languages/
 │   ├── consolidated_report.tex                 # LaTeX source of the consolidated report
 │   ├── phase_1_report.md                       # Phase 1 consolidated technical report
 │   ├── phase_2_report.md                       # Phase 2 technical report
+│   ├── phase_3_report.md                       # Phase 3 technical report
 │   ├── ablation_report.md                      # Bonus positional embedding ablation report
-│   ├── README.md                               # Reports & figures index
 │   └── figures/                                # Publication figures (IMage/ holds the final report figures)
 ├── notebooks/
 │   ├── kaggle-pretrain-hindi.ipynb             # Hindi GPU pretraining & evaluation
@@ -423,6 +423,8 @@ Evaluated on the **700 held-out test samples** containing 100% unseen entities:
 3. **Tokenizer & Corpus Factors in the Low-Resource Tier:** Higher fragmentation in Nepali (1.91 chars/subword vs 2.31 in Hindi) splits named entities across multiple subwords, compounding long-range variable binding difficulty.
 4. **Explaining the Evidence:** Sharper attention entropy collapse in Model H (−13.97% vs −6.42%) indicates that pretraining corpus diversity is indispensable for small transformers to learn compositional relational reasoning.
 
+Full details: [Phase 3 Technical Report](report/phase_3_report.md).
+
 ---
 
 # Bonus — Positional Embedding Ablation Study
@@ -478,9 +480,9 @@ Pre-computed results: [hindi/eval/ablation_no_pos/ablation_results.json](hindi/e
 | [report/consolidated_report.tex](report/consolidated_report.tex) | LaTeX source of the consolidated report |
 | [report/phase_1_report.md](report/phase_1_report.md) | Phase 1 cross-language technical report |
 | [report/phase_2_report.md](report/phase_2_report.md) | Phase 2 pretraining & evaluation report |
+| [report/phase_3_report.md](report/phase_3_report.md) | Phase 3 reasoning finetuning & attention dynamics report |
 | [report/ablation_report.md](report/ablation_report.md) | Bonus ablation report |
 | [hindi/report.md](hindi/report.md) · [nepali/report.md](nepali/report.md) | Per-language Phase 1 reports |
-| [report/README.md](report/README.md) | Reports & figures index |
 
 | Notebook | Purpose |
 | :--- | :--- |
