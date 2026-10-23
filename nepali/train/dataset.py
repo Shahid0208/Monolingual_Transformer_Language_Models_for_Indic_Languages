@@ -4,7 +4,7 @@ Streaming Parquet Dataset & DataLoader for Nepali Language Modeling
 Course: Language Models and Agents (Monsoon 2026)
 Assignment: Individual Project — Phase 2: Model Implementation, Pretraining, and Evaluation
 
-Author: Shahid (Monsoon 2026)
+Author: Shahid0208 (Monsoon 2026)
 Language: Nepali (Model L)
 
 Features:

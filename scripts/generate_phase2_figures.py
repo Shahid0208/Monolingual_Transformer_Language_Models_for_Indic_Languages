@@ -4,7 +4,7 @@ Phase 2 Visualization & Figure Generation Suite
 Course: Language Models and Agents (Monsoon 2026)
 Assignment: Individual Project — Phase 2: Model Implementation, Pretraining, and Evaluation
 
-Author: Shahid (Monsoon 2026)
+Author: Shahid0208 (Monsoon 2026)
 
 Generates publication-quality figures from empirical pretraining and evaluation data:
 1. Figure 1: Pretraining Loss & Perplexity Dynamics (Hindi vs Nepali across 30,518 steps)
