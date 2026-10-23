@@ -8,6 +8,8 @@
 **Architecture:** 12-Layer Pure PyTorch Decoder Transformer ($\approx 25.33\text{M}$ Parameters per Model)  
 **Script:** Devanagari  
 
+> **Bonus — Positional Embedding Ablation:** see [README_bonus_ablation.md](README_bonus_ablation.md) and [report/ablation_report.md](report/ablation_report.md). Phase-wise history is preserved on the `phase-1`, `phase-2`, `phase-3` and `bonus-ablation-no-pos` branches.
+
 ---
 
 ## Master Google Drive Checkpoint & Data Links
