@@ -74,7 +74,6 @@ Monolingual_Transformer_Language_Models_for_Indic_Languages/
 ├── README.md                                   # This file — complete project documentation
 ├── report/
 │   ├── 2025204008.pdf                          # Final compiled project report
-│   ├── consolidated_report.tex                 # LaTeX source of the consolidated report
 │   ├── phase_1_report.md                       # Phase 1 consolidated technical report
 │   ├── phase_2_report.md                       # Phase 2 technical report
 │   ├── phase_3_report.md                       # Phase 3 technical report
@@ -477,7 +476,6 @@ Pre-computed results: [hindi/eval/ablation_no_pos/ablation_results.json](hindi/e
 | Document | Description |
 | :--- | :--- |
 | [report/2025204008.pdf](report/2025204008.pdf) | Final compiled project report |
-| [report/consolidated_report.tex](report/consolidated_report.tex) | LaTeX source of the consolidated report |
 | [report/phase_1_report.md](report/phase_1_report.md) | Phase 1 cross-language technical report |
 | [report/phase_2_report.md](report/phase_2_report.md) | Phase 2 pretraining & evaluation report |
 | [report/phase_3_report.md](report/phase_3_report.md) | Phase 3 reasoning finetuning & attention dynamics report |
